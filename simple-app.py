@@ -10,14 +10,10 @@ app = Flask(__name__)
 def hello():
     return Response("Hi from your Flask app running in your Docker container!")
 
-@app.route("/ayushi")
+@app.route("/test")
 def test():
-    return Response("Hi Ayushi! welcome to JPMorgan")
+    return Response("Hi! This is test response")
 
-
-@app.route("/rds/dealogic/api/v1/spac")
-def deallogic():
-    return Response("JPMorgan")
 
 @app.route('/sum',methods=['GET','POST'])
 def sum_fn():
